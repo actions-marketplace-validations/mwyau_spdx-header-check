@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2026 Albert M. W. Yau
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+name: SPDX Header Check
+description: Check SPDX headers in source files
+runs:
+  using: composite
+  steps:
+    - name: Verify SPDX headers
+      shell: bash
+      run: python "$GITHUB_ACTION_PATH/spdx_headers.py"
+branding:
+  icon: check-circle
+  color: blue

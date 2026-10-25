@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2026 Albert M. W. Yau
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+- id: spdx-header-check
+  name: Check REUSE-style SPDX headers
+  entry: spdx-header-check
+  language: python
+  files: '(^|/)(?:pyproject|Cargo)\.toml$|\.(?:py|pyi|sh|bash|rs|c|cc|cpp|cxx|h|hpp|hxx|hh|cu|cuh|js|mjs|cjs|jsx|ts|mts|cts|tsx)$'
+  exclude: '(^|/)(?:third_party|vendor|vendored|node_modules|build|dist|\.venv)/'
+
